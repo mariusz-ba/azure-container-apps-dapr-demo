@@ -1,0 +1,17 @@
+version: "3"
+
+name: aca-demo
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.13-management
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - aca-demo
+
+networks:
+  aca-demo:
+    name: aca-demo
