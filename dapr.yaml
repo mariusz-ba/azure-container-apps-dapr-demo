@@ -1,0 +1,22 @@
+version: 1
+common:
+  resourcesPath: ./components
+apps:
+  - appID: aca-gateway
+    appDirPath: ./src/Services/AzureContainerApps.Services.Gateway
+    appProtocol: http
+    appPort: 5000
+    daprHTTPPort: 50001
+    daprGrpcPort: 50002
+  - appID: aca-service-a
+    appDirPath: ./src/Services/AzureContainerApps.Services.ServiceA
+    appProtocol: http
+    appPort: 5010
+    daprHTTPPort: 50011
+    daprGrpcPort: 50012
+  - appID: aca-service-b
+    appDirPath: ./src/Services/AzureContainerApps.Services.ServiceB
+    appProtocol: http
+    appPort: 5020
+    daprHTTPPort: 50021
+    daprGrpcPort: 50022
