@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Services.Gateway", "src\Services\AzureContainerAppsDapr.Services.Gateway\AzureContainerAppsDapr.Services.Gateway.csproj", "{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Shared.Monitoring", "src\Shared\AzureContainerAppsDapr.Shared.Monitoring\AzureContainerAppsDapr.Shared.Monitoring.csproj", "{E9AF009B-0141-4131-9846-C452939A71BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,7 @@ Global
 		{E097A629-50E7-4629-B173-87BBFEBEB6FC} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
 		{9186DEAE-A724-4D0E-AC09-362C4F725332} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
 		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
+		{E9AF009B-0141-4131-9846-C452939A71BA} = {C7BA6E14-F222-4C20-B81B-1AA4AA254828}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E097A629-50E7-4629-B173-87BBFEBEB6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -37,5 +40,9 @@ Global
 		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9AF009B-0141-4131-9846-C452939A71BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9AF009B-0141-4131-9846-C452939A71BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9AF009B-0141-4131-9846-C452939A71BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9AF009B-0141-4131-9846-C452939A71BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
