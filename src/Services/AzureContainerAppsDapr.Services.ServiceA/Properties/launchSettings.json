@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "AzureContainerAppsDapr.Services.ServiceA": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5010",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

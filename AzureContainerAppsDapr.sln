@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D239AAAF-3D2F-4AA2-884E-9A7ACBA4741A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C7BA6E14-F222-4C20-B81B-1AA4AA254828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Services.ServiceA", "src\Services\AzureContainerAppsDapr.Services.ServiceA\AzureContainerAppsDapr.Services.ServiceA.csproj", "{E097A629-50E7-4629-B173-87BBFEBEB6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Services.ServiceB", "src\Services\AzureContainerAppsDapr.Services.ServiceB\AzureContainerAppsDapr.Services.ServiceB.csproj", "{9186DEAE-A724-4D0E-AC09-362C4F725332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureContainerAppsDapr.Services.Gateway", "src\Services\AzureContainerAppsDapr.Services.Gateway\AzureContainerAppsDapr.Services.Gateway.csproj", "{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2} = {D239AAAF-3D2F-4AA2-884E-9A7ACBA4741A}
+		{C7BA6E14-F222-4C20-B81B-1AA4AA254828} = {D239AAAF-3D2F-4AA2-884E-9A7ACBA4741A}
+		{E097A629-50E7-4629-B173-87BBFEBEB6FC} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
+		{9186DEAE-A724-4D0E-AC09-362C4F725332} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
+		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6} = {E39FE1BF-5C9A-4CEA-A626-A6CD6929A4B2}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E097A629-50E7-4629-B173-87BBFEBEB6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E097A629-50E7-4629-B173-87BBFEBEB6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E097A629-50E7-4629-B173-87BBFEBEB6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E097A629-50E7-4629-B173-87BBFEBEB6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9186DEAE-A724-4D0E-AC09-362C4F725332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9186DEAE-A724-4D0E-AC09-362C4F725332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9186DEAE-A724-4D0E-AC09-362C4F725332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9186DEAE-A724-4D0E-AC09-362C4F725332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E50E293-B3D6-4A2B-93BC-D75C775E07A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
