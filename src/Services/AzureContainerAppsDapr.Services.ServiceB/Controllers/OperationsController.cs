@@ -17,4 +17,7 @@ public class OperationsController : ControllerBase
 
     [HttpPost("operation-d")]
     public IActionResult OperationD() => Ok("operation-d");
+    
+    [HttpGet("operation-z")]
+    public IActionResult OperationZ() => Ok(Url.ActionLink(nameof(OperationZ)));
 }
