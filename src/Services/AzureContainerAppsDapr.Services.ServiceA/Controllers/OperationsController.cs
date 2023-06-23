@@ -33,6 +33,20 @@ public class OperationsController : ControllerBase
         await _serviceBClient.OperationDAsync();
         return Ok("operation-d");
     }
+    
+    [HttpPost("operation-e")]
+    public async Task<IActionResult> OperationE()
+    {
+        await _serviceBClient.OperationEAsync();
+        return Ok("operation-e");
+    }
+
+    [HttpPost("operation-f")]
+    public async Task<IActionResult> OperationF()
+    {
+        await _serviceBClient.OperationFAsync();
+        return Ok("operation-f");
+    }
 
     [HttpGet("operation-z")]
     public IActionResult OperationZ() => Ok(Url.ActionLink(nameof(OperationZ)));

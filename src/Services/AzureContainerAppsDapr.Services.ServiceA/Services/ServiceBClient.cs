@@ -22,4 +22,18 @@ public class ServiceBClient : IServiceBClient
         var response = await _httpClient.SendAsync(message);
         response.EnsureSuccessStatusCode();
     }
+
+    public async Task OperationEAsync()
+    {
+        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-e");
+        var response = await _httpClient.SendAsync(message);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public async Task OperationFAsync()
+    {
+        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-f");
+        var response = await _httpClient.SendAsync(message);
+        response.EnsureSuccessStatusCode();
+    }
 }
