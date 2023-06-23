@@ -10,3 +10,5 @@ spec:
       value: amqp://localhost:5672
     - name: durable
       value: true
+    - name: deletedWhenUnused
+      value: false
