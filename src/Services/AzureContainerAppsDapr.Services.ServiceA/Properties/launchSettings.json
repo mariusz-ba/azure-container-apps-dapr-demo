@@ -5,8 +5,7 @@
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5010",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "DAPR_HTTP_PORT": "50010"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }

@@ -15,7 +15,6 @@ public class SubscriptionController : ControllerBase
         _logger = logger;
     }
 
-    [Topic("message-broker", "service-b", "event.type == \"OperationEMessage\"", 1)]
     [HttpPost("operation-e")]
     public IActionResult OperationE([FromBody] OperationEMessage message)
     {
@@ -24,7 +23,6 @@ public class SubscriptionController : ControllerBase
         return Ok();
     }
     
-    [Topic("message-broker", "service-b", "event.type == \"OperationFMessage\"", 1)]
     [HttpPost("operation-f")]
     public IActionResult OperationF([FromBody] OperationFMessage message)
     {

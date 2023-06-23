@@ -1,6 +1,4 @@
 version: 1
-common:
-  resourcesPath: ./components
 apps:
   - appID: aca-demo-gateway
     appDirPath: ./src/Services/AzureContainerAppsDapr.Services.Gateway
@@ -8,6 +6,7 @@ apps:
     appPort: 5000
     daprHTTPPort: 50000
     daprGrpcPort: 50001
+    resourcesPaths: ["../../../components"]
     command: ["dotnet", "run"]
   - appID: aca-demo-service-a
     appDirPath: ./src/Services/AzureContainerAppsDapr.Services.ServiceA
@@ -15,6 +14,7 @@ apps:
     appPort: 5010
     daprHTTPPort: 50010
     daprGrpcPort: 50011
+    resourcesPaths: ["../../../components", ".dapr/components"]
     command: ["dotnet", "run"]
   - appID: aca-demo-service-b
     appDirPath: ./src/Services/AzureContainerAppsDapr.Services.ServiceB
@@ -22,4 +22,5 @@ apps:
     appPort: 5020
     daprHTTPPort: 50020
     daprGrpcPort: 50021
+    resourcesPaths: ["../../../components"]
     command: ["dotnet", "run"]

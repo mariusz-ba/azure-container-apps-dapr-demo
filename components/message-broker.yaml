@@ -12,3 +12,5 @@ spec:
       value: true
     - name: deletedWhenUnused
       value: false
+    - name: exchangeKind
+      value: topic

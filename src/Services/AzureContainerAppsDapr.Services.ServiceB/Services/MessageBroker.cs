@@ -19,10 +19,17 @@ public class MessageBroker : IMessageBroker
             return;
         }
 
-        await _daprClient.PublishEventAsync("message-broker", "service-b", new CloudEvent<TMessage>(message)
+        var data = new CloudEvent<TMessage>(message)
         {
             Type = message.GetType().Name,
             Source = new Uri("service:service-b")
-        });
+        };
+
+        var metadata = new Dictionary<string, string>
+        {
+            { "routingKey", data.Type }
+        };
+
+        await _daprClient.PublishEventAsync("message-broker", "service-b", data, metadata);
     }
 }

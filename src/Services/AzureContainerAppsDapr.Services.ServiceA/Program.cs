@@ -17,7 +17,6 @@ app.UseHeadersForwarding();
 app.UseCloudEvents();
 
 app.MapGet("/", () => "Service A");
-app.MapSubscribeHandler();
 app.MapControllers();
 
 app.Run();
