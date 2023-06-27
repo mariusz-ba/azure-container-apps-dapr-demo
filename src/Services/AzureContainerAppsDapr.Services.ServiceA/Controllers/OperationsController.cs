@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AzureContainerAppsDapr.Services.ServiceA.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class OperationsController : ControllerBase
 {
     private readonly IServiceBClient _serviceBClient;

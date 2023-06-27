@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AzureContainerAppsDapr.Services.ServiceB.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class OperationsController : ControllerBase
 {
     private readonly IMessageBroker _messageBroker;

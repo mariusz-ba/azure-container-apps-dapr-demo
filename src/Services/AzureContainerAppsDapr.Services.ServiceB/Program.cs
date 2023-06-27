@@ -1,21 +1,27 @@
 using AzureContainerAppsDapr.Services.ServiceB.Services;
 using AzureContainerAppsDapr.Shared.API.Networking;
 using AzureContainerAppsDapr.Shared.Monitoring;
-using Dapr.Client;
+using Microsoft.AspNetCore.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services
-    .AddApplicationInsightsMonitoring()
-    .AddSingleton(new DaprClientBuilder().Build())
-    .AddSingleton<IMessageBroker, MessageBroker>()
-    .AddControllers();
+builder.Services.AddApplicationInsightsMonitoring();
+builder.Services.AddDaprClient();
+builder.Services.AddSingleton<IMessageBroker, MessageBroker>();
+builder.Services.AddAuthentication().AddDapr();
+builder.Services.AddAuthorization();
+builder.Services.AddHealthChecks();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
 app.UseHeadersForwarding();
+app.UseCloudEvents();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
-app.MapGet("/", () => "Service B");
+app.MapHealthChecks("/health");
 app.MapControllers();
 
 app.Run();

@@ -1,16 +1,17 @@
-using AzureContainerAppsDapr.Services.ServiceA.Messages;
-using Dapr;
+using AzureContainerAppsDapr.Services.ServiceB.Messages;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AzureContainerAppsDapr.Services.ServiceA.Controllers;
+namespace AzureContainerAppsDapr.Services.ServiceB.Controllers;
 
+[Authorize(AuthenticationSchemes = "Dapr")]
 [ApiController]
-[Route("[controller]")]
-public class SubscriptionController : ControllerBase
+[Route("dapr/subscriptions")]
+public class DaprSubscriptionsController : ControllerBase
 {
-    private readonly ILogger<SubscriptionController> _logger;
+    private readonly ILogger<DaprSubscriptionsController> _logger;
 
-    public SubscriptionController(ILogger<SubscriptionController> logger)
+    public DaprSubscriptionsController(ILogger<DaprSubscriptionsController> logger)
     {
         _logger = logger;
     }

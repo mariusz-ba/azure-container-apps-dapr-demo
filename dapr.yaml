@@ -22,5 +22,5 @@ apps:
     appPort: 5020
     daprHTTPPort: 50020
     daprGrpcPort: 50021
-    resourcesPaths: ["../../../components"]
+    resourcesPaths: ["../../../components", ".dapr/components"]
     command: ["dotnet", "run"]

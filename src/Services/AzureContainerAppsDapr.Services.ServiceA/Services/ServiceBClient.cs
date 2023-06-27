@@ -11,28 +11,28 @@ public class ServiceBClient : IServiceBClient
 
     public async Task OperationCAsync()
     {
-        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-c");
+        var message = new HttpRequestMessage(HttpMethod.Post, "/api/operations/operation-c");
         var response = await _httpClient.SendAsync(message);
         response.EnsureSuccessStatusCode();
     }
 
     public async Task OperationDAsync()
     {
-        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-d");
+        var message = new HttpRequestMessage(HttpMethod.Post, "/api/operations/operation-d");
         var response = await _httpClient.SendAsync(message);
         response.EnsureSuccessStatusCode();
     }
 
     public async Task OperationEAsync()
     {
-        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-e");
+        var message = new HttpRequestMessage(HttpMethod.Post, "/api/operations/operation-e");
         var response = await _httpClient.SendAsync(message);
         response.EnsureSuccessStatusCode();
     }
 
     public async Task OperationFAsync()
     {
-        var message = new HttpRequestMessage(HttpMethod.Post, "/operations/operation-f");
+        var message = new HttpRequestMessage(HttpMethod.Post, "/api/operations/operation-f");
         var response = await _httpClient.SendAsync(message);
         response.EnsureSuccessStatusCode();
     }
