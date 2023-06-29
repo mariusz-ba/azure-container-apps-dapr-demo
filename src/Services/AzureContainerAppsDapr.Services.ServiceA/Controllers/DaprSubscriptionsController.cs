@@ -1,9 +1,11 @@
 using AzureContainerAppsDapr.Services.ServiceA.Messages;
+using Dapr;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AzureContainerAppsDapr.Services.ServiceA.Controllers;
 
+[TopicMetadata("routingKey", "OperationEMessage,OperationFMessage")]
 [Authorize(AuthenticationSchemes = "Dapr")]
 [ApiController]
 [Route("dapr/subscriptions")]
@@ -16,6 +18,7 @@ public class DaprSubscriptionsController : ControllerBase
         _logger = logger;
     }
 
+    [Topic("message-broker", "service-b", "event.type == \"OperationEMessage\"", 1)]
     [HttpPost("operation-e")]
     public IActionResult OperationE([FromBody] OperationEMessage message)
     {
@@ -24,6 +27,7 @@ public class DaprSubscriptionsController : ControllerBase
         return Ok();
     }
     
+    [Topic("message-broker", "service-b", "event.type == \"OperationFMessage\"", 1)]
     [HttpPost("operation-f")]
     public IActionResult OperationF([FromBody] OperationFMessage message)
     {

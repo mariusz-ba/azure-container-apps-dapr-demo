@@ -21,6 +21,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapSubscribeHandler();
 app.MapHealthChecks("/health");
 app.MapControllers();
 

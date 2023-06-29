@@ -14,7 +14,7 @@ apps:
     appPort: 5010
     daprHTTPPort: 50010
     daprGrpcPort: 50011
-    resourcesPaths: ["../../../components", ".dapr/components"]
+    resourcesPaths: ["../../../components"]
     command: ["dotnet", "run"]
   - appID: aca-demo-service-b
     appDirPath: ./src/Services/AzureContainerAppsDapr.Services.ServiceB
