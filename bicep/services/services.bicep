@@ -82,6 +82,10 @@ var commonEnvironmentVariables = [
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
     value: containerAppEnvironment.outputs.appInsightsConnectionString
   }
+  {
+    name: 'APP_API_TOKEN'
+    value: 'secret-token'
+  }
 ]
 
 module serviceA '../modules/container-app.bicep' = {
