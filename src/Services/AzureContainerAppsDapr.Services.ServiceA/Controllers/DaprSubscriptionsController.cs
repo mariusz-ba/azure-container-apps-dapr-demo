@@ -27,7 +27,7 @@ public class DaprSubscriptionsController : ControllerBase
         return Ok();
     }
     
-    [Topic("message-broker", "service-b", "event.type == \"OperationFMessage\"", 1)]
+    [Topic("message-broker", "service-b", "event.type == \"OperationFMessage\"", 2)]
     [HttpPost("operation-f")]
     public IActionResult OperationF([FromBody] OperationFMessage message)
     {
