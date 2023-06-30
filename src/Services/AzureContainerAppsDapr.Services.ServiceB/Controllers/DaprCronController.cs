@@ -15,6 +15,9 @@ public class DaprCronController : ControllerBase
         _logger = logger;
     }
 
+    [HttpOptions("send-notification")]
+    public IActionResult SendNotificationOptions() => Ok();
+    
     [HttpPost("send-notification")]
     public IActionResult SendNotification()
     {
